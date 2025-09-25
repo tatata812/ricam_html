@@ -1012,6 +1012,12 @@ header
 .why__list {
   margin: 0 0 64px;
 }
+@media (max-width: 580px) {
+  .why__list {
+    max-width: 378px;
+    margin: 0 auto 64px;
+  }
+}
 .why__list-item {
   position: relative;
 }
@@ -1151,7 +1157,7 @@ header
 }
 @media (max-width: 580px) {
   .college__list {
-    max-width: 380px;
+    max-width: 349px;
   }
 }
 .college__list-item {

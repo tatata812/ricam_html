@@ -293,6 +293,11 @@ header
 
   &__list {
     margin: 0 0 64px;
+
+    @include pc{
+    max-width: 378px;
+    margin: 0 auto 64px;
+    }
   }
 
   &__list-item {
@@ -503,7 +508,7 @@ header
     margin: 0 auto 64px;
 
     @include pc {
-      max-width: 380px;
+      max-width: 349px;
     }
   }
 
