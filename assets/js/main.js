@@ -30,24 +30,17 @@ $(function () {
     });
   });
 
-  //フェードイン
+// フェードイン
 $(function() {
   function fadeInOnScroll() {
-    $('.fade-in-up, .fade-in-right, .fade-in-zoom,.fade-in-left').each(function() {
+    $('.fade-in-up, .fade-in-right, .fade-in-zoom, .fade-in-left').each(function() {
       var elemPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
 
       if (scroll > elemPos - windowHeight + 100) {
-        if ($(this).hasClass('fade-in-zoom')) {
-          // zoomだけ遅延
-          var el = $(this);
-          setTimeout(function(){
-            el.addClass('action');
-          }, 300); // 0.3秒遅延
-        } else {
-          $(this).addClass('action');
-        }
+        // すべて同じ処理（即時 action 付与）
+        $(this).addClass('action');
       }
     });
   }
@@ -58,5 +51,14 @@ $(function() {
     fadeInOnScroll();
   });
 });
+
+$(function() {
+  $(".faq-question").on("click", function() {
+    var parent = $(this).closest(".faq-item");
+    parent.toggleClass("open"); // 矢印だけ切り替え
+    parent.find(".faq-answer").stop().slideToggle(300); // 開閉はここでだけ制御
+  });
+});
+
   
 })
