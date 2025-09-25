@@ -8,13 +8,13 @@ $sub: #2ba99d;
 }
 
 @mixin tab {
-  @media (max-width:(580px)) {
+  @media (max-width:(440px)) {
     @content;
   }
 }
 
 @mixin pc {
-  @media (max-width:(1120px)) {
+  @media (max-width:(580px)) {
     @content;
   }
 }
@@ -24,25 +24,25 @@ $sub: #2ba99d;
   box-sizing: border-box;
 }
 
- body {
+body {
   line-height: 1.8;
   color: #141414;
   font-family: -apple-system, BlinkMacSystemFont,
     "Hiragino Kaku Gothic ProN", "Hiragino Sans",
     "Meiryo", "Yu Gothic", "YuGothic",
     sans-serif;
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 p {
-  font-size:24px;
+  font-size: 24px;
   color: #000;
   letter-spacing: -0.01em;
   text-align: center;
   line-height: 1.3;
 
-  @include sp{
-  font-size: 20px;
+  @include pc{  
+    font-size: 20px;
   }
 }
 
@@ -88,7 +88,7 @@ dt {
 .pc-block {
   display: block;
 
-  @include sp {
+  @include pc {
     display: none;
   }
 }
@@ -96,7 +96,7 @@ dt {
 .sp-block {
   display: none;
 
-  @include sp {
+  @include pc {
     display: block;
   }
 }
@@ -118,31 +118,46 @@ dt {
   overflow: hidden;
 
 
-  @include tab{
-  margin: 66px 0 0;
+  @include pc {
+    margin: 66px 0 0;
   }
 
   @media screen and (max-width: 500px) {
-  margin: 55px 0 0;
-}
-
-  @media screen and (max-width: 430px) {
-  margin: 50px 0 0;
-}
-
-
-
-  @include sp{
-  margin: 44px 0 0;
+    margin: 55px 0 0;
   }
 
+  @media screen and (max-width: 430px) {
+    margin: 50px 0 0;
+  }
+
+
+
+  @include sp {
+    margin: 44px 0 0;
+  }
+
+}
+
+// 共通パーツ
+.apply-btn {
+  max-width: 550px;
+  margin: 0 auto;
+  display: block;
 }
 
 // 装飾
 
 .kirakira {
   display: inline;
-  width: 30px;
+  width: 28px;
+
+  @include pc{
+  width: 20px;
+  }
+}
+
+.red {
+  color: #FE0000;
 }
 
 .red-big {
@@ -150,9 +165,41 @@ dt {
   color: #EF4767;
   font-weight: bold;
 
-  @include sp{
-  font-size: 30px;
+  @include pc{
+    font-size: 28px;  
   }
+
+}
+
+.purple {
+    font-size: 42px;
+  background: linear-gradient(transparent 85%, #988ae6 85%);
+
+  @include pc{
+    font-size: 30px;
+  
+  }
+}
+
+.yellow {
+    background: linear-gradient(transparent 70%, #faff73 70%);
+}
+
+.with-line {
+  &:after {
+  content: "";
+  display: inline-block;
+  width: 1.5em;   /* ←長さを調整 */
+  height: 2px; /* 太さ */
+  background: #000;
+  vertical-align: middle; /* テキストと揃える */
+  margin: 0 0 0.5rem 2px;
+
+  @include pc{
+    margin: 0 0 0.3rem 2px;
+
+  }
+}
 }
 
 
@@ -213,9 +260,12 @@ dt {
 }
 
 @keyframes floatUpDown {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) scale(1);
   }
+
   50% {
     transform: translateY(-10px) scale(1);
   }
@@ -228,9 +278,12 @@ dt {
 }
 
 @keyframes floatLeftRight {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(0) scale(1);
   }
+
   50% {
     transform: translateX(10px) scale(1);
   }
@@ -251,9 +304,11 @@ dt {
   0% {
     transform: rotate(-1deg) scale(1);
   }
+
   50% {
     transform: rotate(1deg) scale(1);
   }
+
   100% {
     transform: rotate(-1deg) scale(1);
   }
@@ -261,20 +316,25 @@ dt {
 
 /* ▼ フェードイン後に跳ねる */
 .fade-in-zoom-bounce.action {
-  animation: bounce 2s ease infinite;
+  animation: bounce 1.5s ease infinite;
   animation-delay: 0.7s;
 }
 
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) scale(1);
   }
+
   30% {
     transform: translateY(-10px) scale(1);
   }
+
   50% {
     transform: translateY(0) scale(1);
   }
+
   70% {
     transform: translateY(-2px) scale(1);
   }

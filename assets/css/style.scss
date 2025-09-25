@@ -11,13 +11,13 @@ $sub: #2ba99d;
 }
 
 @mixin tab {
-  @media (max-width:(580px)) {
+  @media (max-width:(440px)) {
     @content;
   }
 }
 
 @mixin pc {
-  @media (max-width:(1120px)) {
+  @media (max-width:(580px)) {
     @content;
   }
 }
@@ -33,7 +33,7 @@ header
   width: 580px;
   background-color: #fff;
 
-  @include tab {
+  @include pc {
     width: 100%;
   }
 
@@ -46,7 +46,7 @@ header
     gap: 80px;
     padding: 8px 12px 0px;
 
-    @include tab {
+    @include pc {
       width: 100%;
     }
 
@@ -86,6 +86,11 @@ header
  ================================= */
 
 .main-visual {
+  padding: 0 0 120px;
+
+  @include pc{
+  padding: 0 0 60px;
+  }
 
   &__top {
     margin: 0 0 24px;
@@ -135,422 +140,283 @@ header
   }
 
     &__find05 {
+    max-width: 550px;
+    margin: 0 auto 40px;
+  }
+}
+
+/* =================================
+なんでこんなに疲れるの？
+ ================================= */
+
+.desc {
+  padding: 0 16px;
+
+  p {
+    margin: 0 0 48px;
+
+    @include pc{
+    margin: 0 0 32PX;
+    }
+  }
+
+  &__img01 {
     max-width: 500px;
-    margin: 0 auto 8px;
-  }
-}
+    margin: 0 auto 80px;
 
-
-/* =================================
-お知らせ
- ================================= */
-
-.top-info {
-  padding: 80px 12px;
-
-  @include tab {
-    padding: 40px 12px;
-  }
-
-  &__inner {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 0 12px;
-    display: flex;
-
-    @include tab {
-      flex-direction: column;
-      align-items: center;
-      gap: 40px;
+    @include pc{
+        max-width: 300px;
+    margin: 0 auto 40px;
     }
   }
 
-  &__left {
-    width: 400px;
+    &__img02 {
+    margin: 0 auto 64px;
 
-    @include pc {
-      width: 280px;
+    @include pc{
+    margin: 0 auto 40px;
     }
   }
 
-  &__btn {
-    display: block;
-    border: $main 3px solid;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 24px;
-    width: 200px;
-    text-align: center;
-    margin: 60px 0 0;
+          &__img03 {
+    margin: 0 auto 64px;
 
-    @include tab {
-      display: none;
-    }
-
-    &--sp {
-      display: none;
-
-      @include tab {
-        display: block;
-        margin: 0;
-
-      }
+    @include pc{
+    margin: 0 auto 40px;
     }
   }
 
-  &__right {
-    flex: 1;
-  }
+    &__img04 {
+    max-width: 400px;
+    margin: 0 auto 80px;
 
-  &__article {
-    border-bottom: #b6b6b6 1px solid;
-    padding: 18px 44px 18px 4px;
-    position: relative;
-
-    &::after {
-      content: url(../img/top/item-arrow.png);
-      position: absolute;
-      right: -12px;
-      top: 50%;
-      transform: translateY(-50%)scale(0.3);
-    }
-
-    &:first-of-type {
-      border-top: #b6b6b6 1px solid;
-    }
-
-    @include tab {
-      padding: 12px 44px 12px 4px;
+    @include pc{
+        max-width: 300px;
+    margin: 0 auto 40px;
     }
   }
 
-  &__link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+      &__img05 {
+    margin: 0 auto 64px;
 
-    @include tab {
-      flex-wrap: wrap;
-      gap: 8px;
-
+    @include pc{
+    margin: 0 auto 40px;
     }
   }
 
-  &__cat {
-    width: 80px;
-    font-size: 12px;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    background-color: $sub;
-  }
+        &__img06 {
+    margin: 0 auto 64px;
 
-  &__date {
-    font-size: 12px;
-    white-space: nowrap;
-
-  }
-
-  &__ttl {
-    flex: 1;
-    line-height: 1.2;
-
-    @include tab {
-      flex: none;
-      width: 100%;
+    @include pc{
+    margin: 0 auto 40px;
     }
   }
 
-  &__arrow {
-    margin-left: auto;
-    width: 24px;
 
-  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
 }
 
 /* =================================
-メニュー
+
  ================================= */
 
-.top-menu {
-  padding: 80px 12px;
+.aaa {
 
-  @include tab {
-    padding: 40px 12px;
-  }
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
 
 
-  &__inner {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 0 12px;
-    display: flex;
-    gap: 40px;
-
-    @include tab {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  &__item {
-    width: calc((100% - 80px) / 3);
-    position: relative;
-    border-top: #b6b6b6 1px solid;
-    padding: 8px 0 0;
-
-    &::after {
-      content: url(../img/top/item-arrow.png);
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      transform: scale(0.4);
-    }
-
-    @include tab {
-      width: 100%;
-      max-width: 300px;
-    }
-  }
-
-  &__img {
-    width: 200px;
-    /* 丸の直径 */
-    height: 200px;
-    /* 丸の直径 */
-    overflow: hidden;
-    /* 画像が丸の枠からはみ出さないようにする */
-    border-radius: 50%;
-    /* 丸く切る */
-    display: inline-block;
-    margin: 12px 0 0 40px;
-
-    @include pc {
-      width: 160px;
-      /* 丸の直径 */
-      height: 160px;
-      /* 丸の直径 */
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      /* 枠に収まるように画像を拡大・縮小 */
-      display: block;
-    }
-  }
 }
 
 /* =================================
-お問い合わせ
+
  ================================= */
 
-.top-contact {
-  padding: 80px 12px;
+.aaa {
 
-  @include tab {
-    padding: 40px 12px;
-  }
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
 
 
-  &__inner {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 0 12px;
-    display: flex;
-    gap: 40px;
-    justify-content: space-between;
-
-    @include tab {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 24px;
-
-    }
-  }
-
-  &__ttl {
-    margin-right: auto;
-
-    @include tab {
-      margin: 0 auto;
-    }
-  }
-
-  &__item {
-    width: 360px;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-
-    @include tab {
-      width: 100%;
-      max-width: 360px;
-    }
-  }
-
-  &__icon {
-    width: 34px;
-    margin: 0 0 16px;
-
-    &--tel {
-      width: 28px;
-    }
-  }
-
-  &__text {
-    margin: 0 0 24px;
-  }
-
-  &__tel {
-    text-align: center;
-    display: block;
-    font-size: 24px;
-    font-weight: bold;
-  }
 }
 
-
 /* =================================
-footer
+
  ================================= */
 
-.footer {
-  position: relative;
-  border-top: #e9e9e9 2px solid;
+.aaa {
 
-  @include tab {
-    padding: 0;
-  }
+  &__ {}
 
-  &__top {
-    background-color: #fff;
-    padding: 60px 12px;
+  &__ {}
 
+  &__ {}
 
-    @include tab {
-      padding: 40px 12px;
-    }
-  }
+  &__ {}
 
-  &__top-inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &__ {}
 
-    @include tab {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+  &__ {}
 
+  &__ {}
 
-  &__top-left {
-    border-right: $main solid 1px;
-    border-left: $main solid 1px;
-    padding: 0 60px;
+  &__ {}
 
-    @include tab {
-      border-right: none;
-      border-left: none;
-      width: 280px;
-      padding: 0;
-      margin: 0 0 20px;
-    }
-  }
+  &__ {}
 
-  &__ttl {
-    max-width: 200px;
-    display: block;
-    margin: 0 0 24px;
-  }
+  &__ {}
 
-  &__text {
-    margin: 0 0 16px;
-    line-height: 1.2;
-  }
+  &__ {}
 
-  &__tel {
-    font-weight: bold;
-    font-size: 18px;
-  }
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
 
 
+}
 
-  &__top-right {
-    padding: 0 60px;
-    border-right: $main solid 1px;
+/* =================================
 
-    @include tab {
-      border-right: none;
-      padding: 0;
-      width: 280px;
-    }
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
 
 
-  }
-
-  &__nav-wrap {
-    display: flex;
-    font-size: 13px;
-    gap: 40px;
-    margin: 0 0 24px;
-
-    @include tab {
-      gap: 60px;
-    }
-
-  }
-
-  &__nav {
-    display: block;
-    margin: 0 0 2px;
-  }
-
-  &__contact {
-    background-color: $main;
-    color: #fff;
-    padding: 10px;
-    border-radius: 24px;
-    width: 160px;
-    text-align: center;
-    display: block;
-    margin: 0 auto 24px;
-  }
-
-  &__sns-wrap {
-    display: flex;
-    gap: 18px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__sns {
-    width: 28px;
-
-    img {
-      vertical-align: middle;
-    }
-  }
-
-  &__bottom {
-    font-size: 12px;
-    text-align: center;
-    padding: 12px;
-    background-color: $main;
-    color: #fff;
-  }
-
-  &__go-to-btn {
-    width: 40px;
-    position: fixed;
-    bottom: 0px;
-    right: 0px;
-
-    &--osusume {
-      bottom: 100px;
-    }
-  }
 }
