@@ -88,8 +88,8 @@ header
 .main-visual {
   padding: 0 0 120px;
 
-  @include pc{
-  padding: 0 0 60px;
+  @include pc {
+    padding: 0 0 60px;
   }
 
   &__top {
@@ -134,12 +134,12 @@ header
     margin: 0 0 32px;
   }
 
-    &__find04 {
+  &__find04 {
     max-width: 550px;
     margin: 0 auto 8px;
   }
 
-    &__find05 {
+  &__find05 {
     max-width: 550px;
     margin: 0 auto 40px;
   }
@@ -152,11 +152,12 @@ header
 .desc {
   padding: 0 16px;
 
-  p {
+  p,
+  h2 {
     margin: 0 0 48px;
 
-    @include pc{
-    margin: 0 0 32PX;
+    @include pc {
+      margin: 0 0 32PX;
     }
   }
 
@@ -164,55 +165,367 @@ header
     max-width: 500px;
     margin: 0 auto 80px;
 
-    @include pc{
-        max-width: 300px;
-    margin: 0 auto 40px;
+    @include pc {
+      max-width: 300px;
+      margin: 0 auto 40px;
+    }
+  }
+
+  &__img02 {
+    margin: 0 auto 64px;
+
+    @include pc {
+      margin: 0 auto 40px;
+    }
+  }
+
+  &__img03 {
+    margin: 0 auto 64px;
+
+    @include pc {
+      margin: 0 auto 40px;
+    }
+  }
+
+  &__img04 {
+    max-width: 400px;
+    margin: 0 auto 80px;
+
+    @include pc {
+      max-width: 300px;
+      margin: 0 auto 40px;
+    }
+  }
+
+  &__img05 {
+    margin: 0 auto 64px;
+
+    @include pc {
+      margin: 0 auto 40px;
+    }
+  }
+
+  &__img06 {
+    margin: 0 auto 64px;
+
+    @include pc {
+      margin: 0 auto 40px;
+    }
+  }
+
+
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+なぜ、こんな変化が？
+ ================================= */
+
+.why {
+  padding: 0 0 80px;
+
+  @include pc {
+    padding: 0 0 60px;
+  }
+
+  p,
+  h2 {
+    margin: 0 0 48px;
+
+    @include pc {
+      margin: 0 0 32PX;
+    }
+  }
+
+  &__inner {
+    padding: 0 16px;
+  }
+
+  &__img01 {
+    margin: 0 auto 64px;
+
+    @include pc {
+      margin: 0 auto 40px;
+    }
+  }
+
+  &__img02 {
+    max-width: 500px;
+    margin: 0 auto 64px;
+
+    @include pc {
+      margin: 0 auto 40px;
+    }
+  }
+
+  &__list {
+    margin: 0 0 64px;
+  }
+
+  &__list-item {
+    position: relative;
+
+    &::before {
+      content: url(../img/top/why-check.png);
+      position: absolute;
+      top: 55%;
+      left: -66px;
+      transform: translateY(-50%)scale(0.5);
+
+      @include pc {
+        top: 55%;
+        left: -57px;
+        transform: translateY(-50%)scale(0.4);
+      }
+    }
+
+
+  }
+
+  &__img03 {
+    max-width: 500px;
+    margin: 0 auto 64px;
+
+    @include pc {
+      margin: 0 auto 40px;
+    }
+  }
+
+
+  &__img04 {
+    margin: 0 auto 64px;
+
+    @include pc {
+      margin: 0 auto 40px;
+    }
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+他の人の感想は？
+ ================================= */
+
+.impression {
+  padding: 0 16px 80px;
+
+  @include pc {
+    padding: 0 16px 40px;
+  }
+
+  h2 {
+    margin: 0 0 48px;
+
+    @include pc {
+      margin: 0 0 32PX;
+    }
+  }
+
+  &__item {
+    display: flex;
+    background-color: #FFF7F8;
+    border-radius: 8px;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+    margin: 0 0 32px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    @include tab {
+      flex-direction: column-reverse;
+      padding: 16px;
+
+    }
+
+  }
+
+  &__text-wrap {
+    flex: 1;
+  }
+
+  &__ttl {
+    color: #EF4767;
+    font-size: 22px;
+    text-align: left;
+    margin: 0 0 16px;
+
+    @include tab {
+      text-align: center;
+    }
+
+    span {
+      display: block;
+      font-size: 16px;
+      color: #000;
+      font-weight: normal;
+    }
+
+  }
+
+  &__text {
+    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  &__img {
+    width: 180px;
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+大学研究
+ ================================= */
+
+.college {
+  padding: 80px 16px;
+  background-color: #ffffd6;
+
+  @include pc{
+  padding: 40px 16px;
+  }
+
+  h2 {
+    margin: 0 0 48px;
+
+    @include pc {
+      margin: 0 0 32PX;
+    }
+  }
+
+  &__img01 {
+    margin: 0 auto 64px;
+
+    @include pc {
+      margin: 0 auto 40px;
     }
   }
 
     &__img02 {
+
+    margin: 0 auto 24px;
+
+    @include pc {
+      margin: 0 auto 12px;
+    }
+  }
+
+  &__list {
     margin: 0 auto 64px;
 
     @include pc{
-    margin: 0 auto 40px;
+    max-width: 380px;
     }
   }
 
-          &__img03 {
-    margin: 0 auto 64px;
+  &__list-item {
+    position: relative;
 
-    @include pc{
-    margin: 0 auto 40px;
+    &::before {
+      content: url(../img/top/college-icon.png);
+      position: absolute;
+      top: 55%;
+      left: -66px;
+      transform: translateY(-50%)scale(0.5);
+
+      @include pc {
+        top: 55%;
+        left: -57px;
+        transform: translateY(-50%)scale(0.4);
+      }
     }
+
+
   }
-
-    &__img04 {
-    max-width: 400px;
-    margin: 0 auto 80px;
-
-    @include pc{
-        max-width: 300px;
-    margin: 0 auto 40px;
-    }
-  }
-
-      &__img05 {
-    margin: 0 auto 64px;
-
-    @include pc{
-    margin: 0 auto 40px;
-    }
-  }
-
-        &__img06 {
-    margin: 0 auto 64px;
-
-    @include pc{
-    margin: 0 auto 40px;
-    }
-  }
-
-
 
   &__ {}
 
@@ -250,10 +563,117 @@ header
 }
 
 /* =================================
-
+専門家のコメント
  ================================= */
 
-.aaa {
+.comment {
+    padding: 80px 16px;
+
+  @include pc{
+  padding: 40px 16px;
+  }
+
+    h2 {
+    margin: 0 0 48px;
+
+    @include pc {
+      margin: 0 0 32PX;
+    }
+  }
+
+  &__item {
+    background-color: #daecff;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 0 0 32px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    @include tab{
+    padding: 20px;
+    }
+
+
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: center;
+    margin: 0 0 32px;
+
+        @include tab{
+    gap: 12px;
+    justify-content: flex-start;
+    }
+  }
+
+  &__img {
+    width: 120px;
+
+    @include tab{
+    width: 60px;
+    }
+  }
+
+  &__name {
+    color: #0065CC;
+    font-size: 24px;
+    font-weight: bold;
+
+    @include tab{
+    font-size: 20px;
+    }
+
+    span {
+      display: block;
+      color: #000;
+      font-size: 16px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.8;
+
+    span {
+      font-size: 18px;
+    }
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+商品紹介〜今すぐ試してみる
+ ================================= */
+
+.promotion {
 
   &__ {}
 
@@ -293,96 +713,10 @@ header
 }
 
 /* =================================
-
+よくある質問
  ================================= */
 
-.aaa {
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
-}
-
-/* =================================
-
- ================================= */
-
-.aaa {
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
-}
-
-/* =================================
-
- ================================= */
-
-.aaa {
+.question {
 
   &__ {}
 

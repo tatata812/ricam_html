@@ -11,7 +11,7 @@ body {
   background-color: #f0f0f0;
 }
 
-p {
+p, h2, h3 {
   font-size: 24px;
   color: #000;
   letter-spacing: -0.01em;
@@ -19,17 +19,22 @@ p {
   line-height: 1.3;
 }
 @media (max-width: 580px) {
-  p {
+  p, h2, h3 {
     font-size: 20px;
   }
 }
 
 a {
-  font-size: clamp(0.813rem, 0.79rem + 0.11vw, 0.875rem);
-  color: #141414;
+  font-size: 24px;
+  color: #000;
+  letter-spacing: -0.01em;
+  text-align: center;
+  line-height: 1.3;
 }
-a:hover {
-  cursor: pointer;
+@media (max-width: 580px) {
+  a {
+    font-size: 20px;
+  }
 }
 
 a:hover {
@@ -46,7 +51,19 @@ ul,
 ol,
 li {
   list-style: none;
-  font-size: clamp(0.813rem, 0.79rem + 0.11vw, 0.875rem);
+  font-size: 24px;
+  color: #000;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin: 0 0 22px 60px;
+}
+@media (max-width: 580px) {
+  ul,
+  ol,
+  li {
+    font-size: 18px;
+    margin: 0 0 12px 28px;
+  }
 }
 
 table {
@@ -55,8 +72,17 @@ table {
 
 dd,
 dt {
-  list-style: none;
-  font-size: clamp(0.813rem, 0.79rem + 0.11vw, 0.875rem);
+  font-size: 24px;
+  color: #000;
+  letter-spacing: -0.01em;
+  text-align: center;
+  line-height: 1.3;
+}
+@media (max-width: 580px) {
+  dd,
+  dt {
+    font-size: 20px;
+  }
 }
 
 .pc-block {
@@ -133,6 +159,10 @@ dt {
   color: #FE0000;
 }
 
+.pink {
+  color: #EF4767;
+}
+
 .red-big {
   font-size: 44px;
   color: #EF4767;
@@ -154,8 +184,14 @@ dt {
   }
 }
 
-.yellow {
+.yellow-line {
   background: linear-gradient(transparent 70%, #faff73 70%);
+  font-weight: bold;
+}
+
+.red-line {
+  background: linear-gradient(transparent 70%, #EF4767 70%);
+  font-weight: bold;
 }
 
 .with-line:after {
@@ -170,6 +206,16 @@ dt {
 @media (max-width: 580px) {
   .with-line:after {
     margin: 0 0 0.3rem 2px;
+  }
+}
+
+.big {
+  font-size: 55px;
+  font-weight: bold;
+}
+@media (max-width: 580px) {
+  .big {
+    font-size: 32px;
   }
 }
 
@@ -840,11 +886,13 @@ header
 .desc {
   padding: 0 16px;
 }
-.desc p {
+.desc p,
+.desc h2 {
   margin: 0 0 48px;
 }
 @media (max-width: 580px) {
-  .desc p {
+  .desc p,
+  .desc h2 {
     margin: 0 0 32PX;
   }
 }
@@ -901,14 +949,286 @@ header
   }
 }
 /* =================================
-
+なぜ、こんな変化が？
+ ================================= */
+.why {
+  padding: 0 0 80px;
+}
+@media (max-width: 580px) {
+  .why {
+    padding: 0 0 60px;
+  }
+}
+.why p,
+.why h2 {
+  margin: 0 0 48px;
+}
+@media (max-width: 580px) {
+  .why p,
+  .why h2 {
+    margin: 0 0 32PX;
+  }
+}
+.why__inner {
+  padding: 0 16px;
+}
+.why__img01 {
+  margin: 0 auto 64px;
+}
+@media (max-width: 580px) {
+  .why__img01 {
+    margin: 0 auto 40px;
+  }
+}
+.why__img02 {
+  max-width: 500px;
+  margin: 0 auto 64px;
+}
+@media (max-width: 580px) {
+  .why__img02 {
+    margin: 0 auto 40px;
+  }
+}
+.why__list {
+  margin: 0 0 64px;
+}
+.why__list-item {
+  position: relative;
+}
+.why__list-item::before {
+  content: url(../img/top/why-check.png);
+  position: absolute;
+  top: 55%;
+  left: -66px;
+  transform: translateY(-50%) scale(0.5);
+}
+@media (max-width: 580px) {
+  .why__list-item::before {
+    top: 55%;
+    left: -57px;
+    transform: translateY(-50%) scale(0.4);
+  }
+}
+.why__img03 {
+  max-width: 500px;
+  margin: 0 auto 64px;
+}
+@media (max-width: 580px) {
+  .why__img03 {
+    margin: 0 auto 40px;
+  }
+}
+.why__img04 {
+  margin: 0 auto 64px;
+}
+@media (max-width: 580px) {
+  .why__img04 {
+    margin: 0 auto 40px;
+  }
+}
+/* =================================
+他の人の感想は？
+ ================================= */
+.impression {
+  padding: 0 16px 80px;
+}
+@media (max-width: 580px) {
+  .impression {
+    padding: 0 16px 40px;
+  }
+}
+.impression h2 {
+  margin: 0 0 48px;
+}
+@media (max-width: 580px) {
+  .impression h2 {
+    margin: 0 0 32PX;
+  }
+}
+.impression__item {
+  display: flex;
+  background-color: #FFF7F8;
+  border-radius: 8px;
+  padding: 20px;
+  gap: 20px;
+  align-items: center;
+  margin: 0 0 32px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+@media (max-width: 440px) {
+  .impression__item {
+    flex-direction: column-reverse;
+    padding: 16px;
+  }
+}
+.impression__text-wrap {
+  flex: 1;
+}
+.impression__ttl {
+  color: #EF4767;
+  font-size: 22px;
+  text-align: left;
+  margin: 0 0 16px;
+}
+@media (max-width: 440px) {
+  .impression__ttl {
+    text-align: center;
+  }
+}
+.impression__ttl span {
+  display: block;
+  font-size: 16px;
+  color: #000;
+  font-weight: normal;
+}
+.impression__text {
+  text-align: left;
+  background-color: #fff;
+  padding: 20px;
+  font-size: 18px;
+}
+.impression__img {
+  width: 180px;
+}
+/* =================================
+大学研究
+ ================================= */
+.college {
+  padding: 80px 16px;
+  background-color: #ffffd6;
+}
+@media (max-width: 580px) {
+  .college {
+    padding: 40px 16px;
+  }
+}
+.college h2 {
+  margin: 0 0 48px;
+}
+@media (max-width: 580px) {
+  .college h2 {
+    margin: 0 0 32PX;
+  }
+}
+.college__img01 {
+  margin: 0 auto 64px;
+}
+@media (max-width: 580px) {
+  .college__img01 {
+    margin: 0 auto 40px;
+  }
+}
+.college__img02 {
+  margin: 0 auto 24px;
+}
+@media (max-width: 580px) {
+  .college__img02 {
+    margin: 0 auto 12px;
+  }
+}
+.college__list {
+  margin: 0 auto 64px;
+}
+@media (max-width: 580px) {
+  .college__list {
+    max-width: 380px;
+  }
+}
+.college__list-item {
+  position: relative;
+}
+.college__list-item::before {
+  content: url(../img/top/college-icon.png);
+  position: absolute;
+  top: 55%;
+  left: -66px;
+  transform: translateY(-50%) scale(0.5);
+}
+@media (max-width: 580px) {
+  .college__list-item::before {
+    top: 55%;
+    left: -57px;
+    transform: translateY(-50%) scale(0.4);
+  }
+}
+/* =================================
+専門家のコメント
+ ================================= */
+.comment {
+  padding: 80px 16px;
+}
+@media (max-width: 580px) {
+  .comment {
+    padding: 40px 16px;
+  }
+}
+.comment h2 {
+  margin: 0 0 48px;
+}
+@media (max-width: 580px) {
+  .comment h2 {
+    margin: 0 0 32PX;
+  }
+}
+.comment__item {
+  background-color: #daecff;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin: 0 0 32px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+@media (max-width: 440px) {
+  .comment__item {
+    padding: 20px;
+  }
+}
+.comment__top {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+  margin: 0 0 32px;
+}
+@media (max-width: 440px) {
+  .comment__top {
+    gap: 12px;
+    justify-content: flex-start;
+  }
+}
+.comment__img {
+  width: 120px;
+}
+@media (max-width: 440px) {
+  .comment__img {
+    width: 60px;
+  }
+}
+.comment__name {
+  color: #0065CC;
+  font-size: 24px;
+  font-weight: bold;
+}
+@media (max-width: 440px) {
+  .comment__name {
+    font-size: 20px;
+  }
+}
+.comment__name span {
+  display: block;
+  color: #000;
+  font-size: 16px;
+}
+.comment__text {
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.8;
+}
+.comment__text span {
+  font-size: 18px;
+}
+/* =================================
+商品紹介〜今すぐ試してみる
  ================================= */
 /* =================================
-
- ================================= */
-/* =================================
-
- ================================= */
-/* =================================
-
+よくある質問
  ================================= *//*# sourceMappingURL=style.css.map */
