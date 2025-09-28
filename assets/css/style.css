@@ -1358,6 +1358,17 @@ header
   margin-top: 0.8rem;
   line-height: 1.6;
 }
+.question .faq-item .a {
+  width: 30px;
+}
+.question .faq-item .a img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.question .faq-item .text {
+  flex: 1;
+}
 .question .faq-item.open .arrow {
   transform: rotate(-135deg);
 }

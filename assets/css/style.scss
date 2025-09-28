@@ -294,9 +294,9 @@ header
   &__list {
     margin: 0 0 64px;
 
-    @include pc{
-    max-width: 378px;
-    margin: 0 auto 64px;
+    @include pc {
+      max-width: 378px;
+      margin: 0 auto 64px;
     }
   }
 
@@ -770,25 +770,59 @@ header
     padding: 12px;
     margin: 64px 0 24px;
 
-    @include pc{
-    margin: 40px 0 24px;
+    @include pc {
+      margin: 40px 0 24px;
     }
   }
 
   .faq-item {
-  background-color: #fff;
-  padding: 12px;
-  margin: 0 0 20px;
+    background-color: #fff;
+    padding: 12px;
+    margin: 0 0 20px;
 
-  .faq-question {
-    cursor: pointer;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    .faq-question {
+      cursor: pointer;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 20px;
 
-    .q {
+      .q {
+        width: 30px;
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+
+      .text {
+        flex: 1;
+      }
+
+      .arrow {
+        width: 10px;
+        height: 10px;
+        margin-left: auto;
+        border-right: 2px solid #ff6c87;
+        border-bottom: 2px solid #ff6c87;
+        transition: transform .3s ease;
+        transform: rotate(45deg); // ▼ 初期は下向き
+      }
+    }
+
+    .faq-answer {
+      display: none; // ← jQueryが開閉するので初期は非表示
+      border-top: #ff6c87 1px solid;
+      padding: 8px 0 0;
+      margin-top: .8rem;
+      line-height: 1.6;
+    }
+
+    .a {
       width: 30px;
+
       img {
         width: 100%;
         height: auto;
@@ -800,37 +834,18 @@ header
       flex: 1;
     }
 
-    .arrow {
-      width: 10px;
-      height: 10px;
-      margin-left: auto;
-      border-right: 2px solid #ff6c87;
-      border-bottom: 2px solid #ff6c87;
-      transition: transform .3s ease;
-      transform: rotate(45deg); // ▼ 初期は下向き
+    &.open {
+      .arrow {
+        transform: rotate(-135deg); // ▲ 開いたとき上向き
+      }
     }
   }
 
-  .faq-answer {
-    display: none; // ← jQueryが開閉するので初期は非表示
-    border-top: #ff6c87 1px solid;
-    padding: 8px 0 0;
-    margin-top: .8rem;
-    line-height: 1.6;
-  }
-
-  &.open {
-    .arrow {
-      transform: rotate(-135deg); // ▲ 開いたとき上向き
-    }
-  }
-}
-
-.faq-answer-flex {
-  display: flex;
-      align-items: center;
+  .faq-answer-flex {
+    display: flex;
+    align-items: center;
     gap: 20px;
-}
+  }
 
 
 
