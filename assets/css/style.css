@@ -1040,7 +1040,7 @@ header
   .why__list-item::before {
     top: 55%;
     left: -57px;
-    transform: translateY(-50%) scale(0.4);
+    transform: translateY(-50%) scale(0.3);
   }
 }
 .why__img03 {
@@ -1164,6 +1164,7 @@ header
 }
 .college__list {
   margin: 0 auto 64px;
+  max-width: 490px;
 }
 @media (max-width: 580px) {
   .college__list {

@@ -268,7 +268,7 @@ header
       @include pc {
         top: 55%;
         left: -57px;
-        transform: translateY(-50%)scale(0.4);
+        transform: translateY(-50%)scale(0.3);
       }
     }
   }
@@ -399,6 +399,7 @@ header
 
   &__list {
     margin: 0 auto 64px;
+    max-width: 490px;
 
     @include pc {
       max-width: 349px;
